@@ -1,0 +1,43 @@
+top:
+    msubleq top top tismain;
+_main:
+    msubleq dec sp;
+    msubleq ?+15;
+    msubleq sp ?+10;
+    msubleq ?+8;
+    msubleq sp ?+3;
+    msubleq 0;
+    msubleq ?+8;
+    msubleq sp ?+3;
+    msubleq bp 0;
+    msubleq bp;
+    msubleq sp bp;
+
+    msubleq sp;
+    msubleq bp sp;
+    msubleq ?+11;
+    msubleq sp ?+6;
+    msubleq bp;
+    msubleq 0 bp;
+    msubleq inc sp;
+    msubleq ?+11;
+    msubleq sp ?+6;
+    msubleq ?+9;
+    msubleq 0 ?+4;
+    msubleq Z Z 0;
+
+tismain:
+    msubleq dec sp;
+    msubleq ?+15;
+    msubleq sp ?+10;
+    msubleq ?+8;
+    msubleq sp ?+3;
+    msubleq 0;
+    msubleq ?+8;
+    msubleq sp ?+3;
+    msubleq ?+2 0 _main;
+    . ?;
+    msubleq inc sp;
+    msubleq Z Z (-1);
+
+. inc:-1 Z:0 dec:1 ax:0 bp:0 sp:-sp;
